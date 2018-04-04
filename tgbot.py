@@ -38,6 +38,12 @@ def is_sudo(user):
 ##########################################
 
 
+user_dict = {}
+
+
+class User:
+    def __init__(self, name):
+        self.name = name
 
 @bot.message_handler(func=lambda msg: msg.text.encode("utf-8") == "😬 نمایش کل تست ها")
 def send_something(message):
